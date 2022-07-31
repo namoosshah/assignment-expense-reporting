@@ -10,6 +10,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![Alt text](src/assets/sceenshots/name.png?raw=true "Reporting - Departments")
 
+## Packages Used
+
+- styled-components
+- react-tabs
+- papaparse // for parsing csv file
 ## Available Scripts
 
 In the project directory, you can run:
