@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Sceenshots
+
+![Alt text](src/assets/sceenshots/expenses.png?raw=true "Expenses List")
+
+![Alt text](src/assets/sceenshots/departments.png?raw=true "Reporting - Departments")
+
+![Alt text](src/assets/sceenshots/name.png?raw=true "Reporting - Departments")
+
 ## Available Scripts
 
 In the project directory, you can run:
