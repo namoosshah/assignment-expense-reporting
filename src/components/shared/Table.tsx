@@ -42,13 +42,17 @@ export const Table = (props: {
   return (<TableMarkup titles={Object.keys(props.data[0])} data={props.data} />);
 }
 const TableMarkup = ({ titles, data }: any) => {
-  const [sortKey, setSortKey] = useState('department');
+  const [sortKey, setSortKey] = useState('');
   const [sortOrder, setSortOrder] = useState('asc');
   const [columns, setColumns] = useState(data);
+  
   useEffect(() => {
     setColumns(data);
+    setSortKey(Object.keys(data[0])[0]); // default sort for selected listing
   }, [data]);
+
   const total = columns.reduce((accumulator: number, current: Expense) => accumulator + current.amount, 0);
+  // Format currency
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'EUR',
@@ -71,7 +75,9 @@ const TableMarkup = ({ titles, data }: any) => {
   }
 
   useEffect(() => {
-    sort();
+    if (sortKey) {
+      sort();
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sortKey, sortOrder]);
 
